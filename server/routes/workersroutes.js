@@ -11,7 +11,7 @@ const {protect} = require("../middleware/authMiddleware");
 
 router.post("/",protect,createWorkerProfile);
 router.get("/",getAllWorkers);
-router.get("/:id",getWorkerById);
+router.get("/user/:userId",getWorkerById);
 router.patch("/:id",protect,updateWorkerProfile);
 router.delete("/:id",protect,deleteWorkerProfile);
 

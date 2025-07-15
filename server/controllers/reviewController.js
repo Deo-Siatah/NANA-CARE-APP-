@@ -22,9 +22,9 @@ try{
 //2.GET all reviews for a user (worker/employer)
 exports.getReviewsByTargetUser = async (req,res) => {
     try{
-        const {targetId } = req.params;
+        const {userId } = req.params;
 
-        const reviews = await Review.find({target:targetId}).populate("reviewer","name");
+        const reviews = await Review.find({target:userId}).populate("reviewer","name");
         res.status(200).json(reviews);
     } catch (error) {
         res.status(500).json({message: "❌Failed to fetch reviews",error:error.message});

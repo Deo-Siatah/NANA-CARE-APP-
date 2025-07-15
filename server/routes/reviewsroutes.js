@@ -4,6 +4,6 @@ const {createReview,getReviewsByTargetUser} = require("../controllers/reviewCont
 const {protect}= require("../middleware/authMiddleware");
 
 router.post("/",protect,createReview);
-router.get("/:trgetId",getReviewsByTargetUser);
+router.get("/target/:userId",getReviewsByTargetUser);
 
 module.exports = router;

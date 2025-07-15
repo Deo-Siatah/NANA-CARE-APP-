@@ -31,7 +31,7 @@ exports.getAllWorkers = async (req,res) => {
 //get worker by ID 
 exports.getWorkerById = async (req,res) => {
     try{
-        const worker = await Worker.findById(req.params.id).populate("user","name email");
+        const worker = await Worker.findOne({user: req.params.userId}).populate("user","name email");
 
         if (!worker) return res.status(404).json({ message: "❌worker not found"})
         res.status(200).json(worker);
