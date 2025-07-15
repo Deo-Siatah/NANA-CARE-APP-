@@ -4,6 +4,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = 5000;
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://nana-care-app-backend-url.onrender.com"
+];
+
 //starting app
 const app = express();
 
@@ -25,10 +30,17 @@ const connectDB = async () => {
 connectDB();
 
 //middleware
+
 app.use(cors({
-    origin: "http://localhost:5173",
-    credentials:true,
-}));
+    origin: function (origin,callback) {
+        if (!origin || allowedOrigins.includes(origin)){
+            callback(null,true);
+        } else {
+            callback (new Error("Not allowed by CORS"))
+        }
+    },
+    credentials: true
+}))
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/authroutes"));
