@@ -28,11 +28,13 @@ export default function Signup(){
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
             <Card className="w-full max-w-md bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700">
                 <CardContent className="p-6">
-                    <h2 className="text-2xl font-bold mb-4 text-center">Create an Account</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center dark:text-white">Create an Account</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <Input
                           placeholder="Enter full name"
+                          className="mt-1 bg-gray-100 dark:bg-gray-700 dark:text-white"
                           value={formData.name}
+                          autoComplete="username"
                           onChange={(e) => setFormData({...formData,name:e.target.value})}
                           required
                         />
@@ -40,14 +42,18 @@ export default function Signup(){
                         <Input
                           placeholder="Email"
                           type="email"
+                          className="mt-1 bg-gray-100 dark:bg-gray-700 dark:text-white"
                           value={formData.email}
+                          autoComplete="email"
                           onChange={(e) => setFormData({...formData,email:e.target.value})}
                           required
                         />
                         <Input
                           placeholder="Password"
                           type="password"
+                          className="mt-1 bg-gray-100 dark:bg-gray-700 dark:text-white"
                           value={formData.password}
+                          autoComplete="current-password"
                           onChange={(e) => setFormData({...formData,password:e.target.value})}
                           required
                         />

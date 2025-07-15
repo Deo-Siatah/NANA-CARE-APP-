@@ -66,13 +66,6 @@ export default function RegisterWorkerForm() {
               Create Your Worker Profile
             </h2>
 
-            {user && (
-                <p className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
-                  Hello, {user.name}! Let's set up your worker profile.
-                </p>
-              )}
-
-
             <div className="bg-emerald-50 dark:bg-emerald-900/20 p-4 rounded-lg text-sm text-emerald-800 dark:text-emerald-200 flex items-start gap-2 mb-6">
               <Shield className="h-4 w-4 mt-1" />
               All profiles are verified by our admin team before going live.
