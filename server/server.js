@@ -6,7 +6,7 @@ const PORT = 5000;
 
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://nana-care-app-deo-siatah.vercel.app/"
+    "https://nana-care-app-deo-siatah.vercel.app"
 ];
 
 //starting app
