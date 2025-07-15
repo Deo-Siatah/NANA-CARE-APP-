@@ -26,7 +26,7 @@ export default function Signup(){
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
-            <Card className="w-full max-w-md">
+            <Card className="w-full max-w-md bg-white dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700">
                 <CardContent className="p-6">
                     <h2 className="text-2xl font-bold mb-4 text-center">Create an Account</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
