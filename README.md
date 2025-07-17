@@ -1,15 +1,16 @@
 # 👩🏽‍🦱🛡️ Nana Care
 
 > *Empowering Kenya’s Domestic Workers through Technology, Dignity, and Opportunity*
-
+> ---
+><img src="https://github.com/user-attachments/assets/495677f9-f24c-4a7d-ba89-6c3c4fcfe6a5" width="600" />
 [LIVE nana care url HERE](https://nana-care-app-deo-siatah.vercel.app/)
 ---
 [LIVE backend nana care url HERE](https://nana-care-app-backend-url.onrender.com)
 ---
-[PITCH DECK NANA CAREURL HERE](https://drive.google.com/drive/folders/1bxN-Lxx5RiZRZ5zGXwmBqjmyrxgutx6s)
-
+[PITCH DECK NANA CAREURL HERE AND SHORT VIDEO PREVIEW](https://drive.google.com/drive/folders/1bxN-Lxx5RiZRZ5zGXwmBqjmyrxgutx6s)
 
 ---
+
 
 ## 📖 Table of Contents
 
