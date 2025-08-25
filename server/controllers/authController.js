@@ -9,10 +9,10 @@ exports.signup = async (req,res) => {
     
     const {name,email,password} = req.body;
     //check if user already exists by email
-    const emailExists = await User.findOne({email});
+    const emailExists = await User.findOne({email}).select("password role name").lean();
     if (emailExists) return res.status(400).json({message: "Email already exists"});
 
-    const usernameExists = await User.findOne({name});
+    const usernameExists = await User.findOne({name}).lean();
     if (usernameExists) return res.status(400).json({message: "username already exists"})
 
     const hashed = await bcrypt.hash(password,10);
@@ -33,7 +33,7 @@ exports.login = async (req,res) => {
     try{
         const {email,password} = req.body;
         
-        const user = await User.findOne({email});
+        const user = await User.findOne({email}).lean();
     
         if (!user) return res.status(404).json({message: "User Not Found"});
 

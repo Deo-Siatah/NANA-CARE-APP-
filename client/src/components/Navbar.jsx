@@ -33,7 +33,7 @@ export default function Navbar(){
                         <Link
                             to="/login"
                         >
-                             <Button variant="outline" size="sm" className="dark:text-white border dark:border-gray-500">Login</Button>
+                             <Button variant="outline" size="sm"  className="dark:text-white border dark:border-gray-500">Login</Button>
                         </Link>
                     </nav>
                 </div>

@@ -18,7 +18,7 @@ export default function Signup(){
 
             localStorage.setItem("token",token);
             
-            navigate("/home");//Redirect to homepage
+            navigate("/");//Redirect to homepage
         } catch (err){
             console.error("Failed to signup:",err)
         }
